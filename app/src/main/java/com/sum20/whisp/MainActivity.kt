@@ -26,4 +26,15 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    fun appendNum(string: String, clear: Boolean) {
+//        if(clear) {
+//            Result.text = ""
+//            Expression.append(string)
+//        } else {
+//            Expression.append(Result.text)
+//            Expression.append(string)
+//            Result.text = ""
+//        }
+    }
 }

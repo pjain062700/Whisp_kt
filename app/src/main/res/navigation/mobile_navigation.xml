@@ -22,4 +22,9 @@
         android:name="com.sum20.whisp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/displayCallActivity"
+        android:name="com.sum20.whisp.DisplayCallActivity"
+        android:label="activity_display_call"
+        tools:layout="@layout/activity_display_call" />
 </navigation>
