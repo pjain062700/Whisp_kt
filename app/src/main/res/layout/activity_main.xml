@@ -5,14 +5,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
+    android:background="@drawable/person_on_a_bridge_near_a_lake_747964">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="407dp"
         android:layout_height="69dp"
-        android:background="@android:color/holo_orange_dark"
+        android:background="#616A6868"
         app:itemIconTint="@color/design_default_color_on_secondary"
         app:itemTextColor="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"
+        android:background="@drawable/person_on_a_bridge_near_a_lake_747964"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintEnd_toStartOf="@id/nav_view"
