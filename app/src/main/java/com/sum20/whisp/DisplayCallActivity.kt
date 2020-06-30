@@ -16,6 +16,7 @@ class DisplayCallActivity : AppCompatActivity() {
             text = phoneNumber
         }
         val callTime = findViewById<Chronometer>(R.id.callTime).start()
+        supportActionBar?.hide()
     }
 
     fun callEnd(view: View){

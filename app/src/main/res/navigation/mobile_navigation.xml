@@ -15,7 +15,13 @@
         android:id="@+id/navigation_call"
         android:name="com.sum20.whisp.ui.call.CallFragment"
         android:label="@string/title_call"
-        tools:layout="@layout/fragment_call" />
+        tools:layout="@layout/fragment_call" >
+        <action
+            android:id="@+id/action_navigation_call_to_displayCallActivity"
+            app:destination="@id/displayCallActivity"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
