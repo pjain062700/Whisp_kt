@@ -19,12 +19,15 @@
     <string name="_hash">#</string>
     <string name="call_button_transition">Call Button Transition</string>
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="personalization_header">Personalization</string>
+    <string name="credits_header">Credits</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <!-- Personalization Preferences -->
+    <string name="background_image">Background image to use</string>
+    <string name="current_image">Person On a Bridge</string>
+
+    <!-- Personalization Preferences -->
+    <string name="music_file">Music to Use</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
@@ -32,4 +35,14 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
