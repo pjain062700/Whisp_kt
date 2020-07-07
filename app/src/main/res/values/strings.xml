@@ -23,8 +23,10 @@
     <string name="credits_header">Credits</string>
 
     <!-- Personalization Preferences -->
-    <string name="background_image">Background image to use</string>
-    <string name="current_image">Person On a Bridge</string>
+    <string name="background_title">Backgrounds</string>
+    <string name="background_summary">Change Current Background</string>
+    <string name="dark_star_space">Dark Starry Night</string>
+    <string name="person_on_a_bridge">Mountain Scenery</string>
 
     <!-- Personalization Preferences -->
     <string name="music_file">Music to Use</string>

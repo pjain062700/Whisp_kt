@@ -1,12 +1,12 @@
 <resources>
-    <!-- Reply Preference -->
-    <string-array name="reply_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
-    </string-array>
+    <!-- BG Preference -->
+    <array name="thumbnails">
+        <item>@drawable/dark_star_space</item>
+        <item>@drawable/person_on_a_bridge_near_a_lake_747964</item>
+    </array>
 
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
-    </string-array>
+    <array name="images">
+        <item>@drawable/dark_star_space</item>
+        <item>@drawable/person_on_a_bridge_near_a_lake_747964</item>
+    </array>
 </resources>
