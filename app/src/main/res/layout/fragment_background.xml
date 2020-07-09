@@ -31,11 +31,18 @@
 
         <ImageView
             android:id="@+id/personOnABridgeSettingImage"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@string/person_on_a_bridge"
             android:src="@drawable/person_on_a_bridge_near_a_lake_747964" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@tools:sample/avatars" />
+
     </LinearLayout>
 
 </LinearLayout>

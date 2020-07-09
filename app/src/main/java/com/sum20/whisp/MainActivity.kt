@@ -11,14 +11,13 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.String
 
 
 class MainActivity : AppCompatActivity() {
-    val bgs = Array(3) {"@drawable/person_on_a_bridge_near_a_lake_747964"; "@drawable/warm_forest_path"; "@drawable/dark_star_space" }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var bgPref = 1
+
+        var bgPref = ""
 
         // Tells AS to run out code in addition to existing code in oncreate() parent class
         super.onCreate(savedInstanceState)
@@ -42,13 +41,17 @@ class MainActivity : AppCompatActivity() {
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
 
-        bgPref = prefs.getInt("background_images", 1)
-        Toast.makeText(this, String.valueOf(bgPref), Toast.LENGTH_SHORT).show()
+        bgPref = prefs.getString("background_images", "").toString()
+        print(bgPref)
+
+        Toast.makeText(this, bgPref, Toast.LENGTH_SHORT).show()
         setBg(bgPref)
     }
 
-    private fun setBg(bgPref: Int) {
-        container?.background = resources.getDrawable(R.drawable.dark_star_space);
+    private fun setBg(bgPref: String) {
+        val bgs = Array(3) {resources.getDrawable(R.drawable.person_on_a_bridge_near_a_lake_747964); resources.getDrawable(R.drawable.warm_forest_path); resources.getDrawable(R.drawable.dark_star_space)}
+
+        container?.background = bgs[1];
 
     }
 
