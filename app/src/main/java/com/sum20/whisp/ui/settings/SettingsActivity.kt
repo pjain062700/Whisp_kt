@@ -1,10 +1,9 @@
-package com.sum20.whisp
+package com.sum20.whisp.ui.settings
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceFragmentCompat
+import com.sum20.whisp.R
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -13,7 +12,10 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.settings_activity)
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.settings, SettingsFragment())
+            .replace(
+                R.id.settings,
+                SettingsFragment()
+            )
             .commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 //        setupActionBarWithNavController(navController, appBarConfiguration)

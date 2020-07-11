@@ -10,9 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.sum20.whisp.DisplayCallActivity
 import com.sum20.whisp.R
-import com.sum20.whisp.SettingsActivity
+import com.sum20.whisp.ui.settings.SettingsActivity
 
 class HomeFragment : Fragment() {
 

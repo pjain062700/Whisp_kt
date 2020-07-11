@@ -1,4 +1,4 @@
-package com.sum20.whisp.ui
+package com.sum20.whisp.ui.settings
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
