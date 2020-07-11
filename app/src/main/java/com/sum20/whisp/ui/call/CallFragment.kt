@@ -1,6 +1,8 @@
 package com.sum20.whisp.ui.call
 
 import android.content.Intent
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,8 +34,9 @@ class CallFragment : Fragment() {
             textView.text = it
         })
 
-
         root.findViewById<TextView>(R.id.tvOne).setOnClickListener {
+            var mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.zero)
+            mediaPlayer?.start()
             appendNum("1", true)
         }
 
@@ -91,7 +94,6 @@ class CallFragment : Fragment() {
         if(text_call.length() <= 15){
             val t = view?.findViewById<TextView>(R.id.text_call)
             t!!.append(string)
-
         }
 
     }

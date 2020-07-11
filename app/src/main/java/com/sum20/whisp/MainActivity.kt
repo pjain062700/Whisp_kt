@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     private fun setBg(bgPref: String) {
         val bgs = Array(3) {resources.getDrawable(R.drawable.person_on_a_bridge_near_a_lake_747964); resources.getDrawable(R.drawable.warm_forest_path); resources.getDrawable(R.drawable.dark_star_space)}
 
-        container?.background = bgs[1];
+        container?.background = bgs[0];
 
     }
 
