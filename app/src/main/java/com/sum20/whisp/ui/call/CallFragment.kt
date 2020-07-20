@@ -4,7 +4,6 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
-import android.telecom.Call
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +35,8 @@ class CallFragment : Fragment() {
         })
 
         root.findViewById<TextView>(R.id.tvOne).setOnClickListener {
+            var mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.zero)
+            mediaPlayer?.start()
             appendNum("1", true)
         }
 
@@ -91,7 +92,6 @@ class CallFragment : Fragment() {
 
     private fun appendNum(string: String, clear: Boolean) {
         if(text_call.length() <= 15){
-            CallTones.playTone(string)
             val t = view?.findViewById<TextView>(R.id.text_call)
             t!!.append(string)
         }
