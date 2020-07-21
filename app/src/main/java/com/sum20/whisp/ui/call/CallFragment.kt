@@ -35,52 +35,62 @@ class CallFragment : Fragment() {
         })
 
         root.findViewById<TextView>(R.id.tvOne).setOnClickListener {
-            var mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.zero)
-            mediaPlayer?.start()
             appendNum("1", true)
+            CallTones.playTone("1")
         }
 
         root.findViewById<TextView>(R.id.tvTwo).setOnClickListener {
             appendNum("2", clear = true)
+            CallTones.playTone("2")
         }
 
         root.findViewById<TextView>(R.id.tvThree).setOnClickListener {
             appendNum("3", clear = true)
+            CallTones.playTone("3")
         }
         root.findViewById<TextView>(R.id.tvFour).setOnClickListener {
             appendNum("4", clear = true)
+            CallTones.playTone("4")
         }
 
         root.findViewById<TextView>(R.id.tvFive).setOnClickListener {
             appendNum("5", clear = true)
+            CallTones.playTone("5")
         }
 
         root.findViewById<TextView>(R.id.tvSix).setOnClickListener {
             appendNum("6", clear = true)
+            CallTones.playTone("6")
         }
 
         root.findViewById<TextView>(R.id.tvSeven).setOnClickListener {
             appendNum("7", clear = true)
+            CallTones.playTone("7")
         }
 
         root.findViewById<TextView>(R.id.tvEight).setOnClickListener {
             appendNum("8", clear = true)
+            CallTones.playTone("8")
         }
 
         root.findViewById<TextView>(R.id.tvNine).setOnClickListener {
             appendNum("9", clear = true)
+            CallTones.playTone("9")
         }
 
         root.findViewById<TextView>(R.id.tvZero).setOnClickListener {
             appendNum("0", clear = true)
+            CallTones.playTone("0")
         }
 
         root.findViewById<TextView>(R.id.tvPound).setOnClickListener {
             appendNum("#", clear = true)
+            CallTones.playTone("#")
         }
 
         root.findViewById<TextView>(R.id.tvAst).setOnClickListener {
             appendNum("*", clear = true)
+            CallTones.playTone("*")
         }
 
         root.findViewById<ImageView>(R.id.ivCall).setOnClickListener {

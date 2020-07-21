@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:soundEffectsEnabled="false"
     tools:context=".ui.call.CallFragment">
 
     <TextView
@@ -48,6 +49,7 @@
                 android:background="#95FFFFFF"
                 android:text="@string/_1"
                 android:textColor="#000000"
+                android:soundEffectsEnabled="false"
                 android:textSize="24sp" />
 
             <TextView
@@ -56,6 +58,7 @@
                 android:background="#95FFFFFF"
                 android:text="@string/_2"
                 android:textColor="#000000"
+                android:soundEffectsEnabled="false"
                 android:textColorHighlight="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -64,6 +67,7 @@
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_3"
+                android:soundEffectsEnabled="false"
                 android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -77,6 +81,7 @@
 
             <TextView
                 android:id="@+id/tvFour"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_4"
@@ -85,6 +90,7 @@
 
             <TextView
                 android:id="@+id/tvFive"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_5"
@@ -93,6 +99,7 @@
 
             <TextView
                 android:id="@+id/tvSix"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_6"
@@ -109,6 +116,7 @@
 
             <TextView
                 android:id="@+id/tvSeven"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_7"
@@ -117,6 +125,7 @@
 
             <TextView
                 android:id="@+id/tvEight"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_8"
@@ -125,6 +134,7 @@
 
             <TextView
                 android:id="@+id/tvNine"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_9"
@@ -141,6 +151,7 @@
 
             <TextView
                 android:id="@+id/tvAst"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_ast"
@@ -149,6 +160,7 @@
 
             <TextView
                 android:id="@+id/tvZero"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_0"
@@ -157,6 +169,7 @@
 
             <TextView
                 android:id="@+id/tvPound"
+                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
                 android:text="@string/_hash"
