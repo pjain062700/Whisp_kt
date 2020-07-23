@@ -2,17 +2,21 @@ package com.sum20.whisp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout
 import android.view.View
 import android.widget.Chronometer
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class DisplayCallActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_call)
 
+        val layoutthing = findViewById<ConstraintLayout>(R.id.constraintDisplayCall)
+
         val phoneNumber = intent.getStringExtra("com.sum20.whisp.ui.call.CALLING")
-        val textView = findViewById<TextView>(R.id.phoneNumberCall).apply{
+        val textView = findViewById<TextView>(R.id.phoneNumberCall).apply {
             text = phoneNumber
         }
         val callTime = findViewById<Chronometer>(R.id.callTime).start()

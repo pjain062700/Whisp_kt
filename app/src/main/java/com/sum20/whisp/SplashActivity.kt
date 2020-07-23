@@ -15,21 +15,13 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.hide()
 
-//        findViewById<ConstraintLayout>(R.id.splashContainer).setOnClickListener {
-//            splashTap()
-//        }
-
-        Handler().postDelayed({
-            //start main activity
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-            //finish this activity
-            finish()
-        },4000)
+        findViewById<ConstraintLayout>(R.id.splashContainer).setOnClickListener {
+            splashTap()
+        }
     }
 
     private fun splashTap(){
         startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-//        startActivity(intent)
         finish()
     }
 }

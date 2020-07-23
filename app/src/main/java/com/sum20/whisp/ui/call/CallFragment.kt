@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -67,7 +68,6 @@ class CallFragment : Fragment() {
 
         root.findViewById<TextView>(R.id.tvNine).setOnClickListener {
             appendNum("9", clear = true)
-            CallTones.playTone("9")
         }
 
         root.findViewById<TextView>(R.id.tvZero).setOnClickListener {
@@ -94,6 +94,7 @@ class CallFragment : Fragment() {
         if(text_call.length() <= 15){
             val t = view?.findViewById<TextView>(R.id.text_call)
             t!!.append(string)
+            CallTones.playTone(string)
         }
 
     }

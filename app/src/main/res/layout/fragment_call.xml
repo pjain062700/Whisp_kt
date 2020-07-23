@@ -13,9 +13,10 @@
         android:layout_height="72dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:background="#68000000"
         android:gravity="center_horizontal|center_vertical"
         android:textAlignment="center"
@@ -23,13 +24,15 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="294dp"
         android:layout_height="367dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/ivCall"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,18 +50,18 @@
                 android:id="@+id/tvOne"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_1"
                 android:textColor="#000000"
-                android:soundEffectsEnabled="false"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvTwo"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_2"
                 android:textColor="#000000"
-                android:soundEffectsEnabled="false"
                 android:textColorHighlight="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -66,8 +69,8 @@
                 android:id="@+id/tvThree"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
-                android:text="@string/_3"
                 android:soundEffectsEnabled="false"
+                android:text="@string/_3"
                 android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -81,27 +84,27 @@
 
             <TextView
                 android:id="@+id/tvFour"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_4"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvFive"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_5"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvSix"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_6"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -116,27 +119,27 @@
 
             <TextView
                 android:id="@+id/tvSeven"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_7"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvEight"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_8"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvNine"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_9"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -151,27 +154,27 @@
 
             <TextView
                 android:id="@+id/tvAst"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_ast"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvZero"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_0"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvPound"
-                android:soundEffectsEnabled="false"
                 style="@style/NumberButtonStyle"
                 android:background="#95FFFFFF"
+                android:soundEffectsEnabled="false"
                 android:text="@string/_hash"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -183,10 +186,10 @@
         android:id="@+id/ivCall"
         android:layout_width="78dp"
         android:layout_height="72dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/call_button_transition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/sym_action_call" />
 
