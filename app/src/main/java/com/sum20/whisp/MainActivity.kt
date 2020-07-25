@@ -1,7 +1,6 @@
 package com.sum20.whisp
 
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_call, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_call, R.id.navigation_resources
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -41,17 +40,17 @@ class MainActivity : AppCompatActivity() {
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
 
-        bgPref = prefs.getString("background_images", "").toString()
-        print(bgPref)
-
-        Toast.makeText(this, bgPref, Toast.LENGTH_SHORT).show()
-        setBg(bgPref)
+//        bgPref = prefs.getString("background_images", "").toString()
+//        print(bgPref)
+//
+//        Toast.makeText(this, bgPref, Toast.LENGTH_SHORT).show()
+//        setBg(bgPref)
     }
 
     private fun setBg(bgPref: String) {
         val bgs = Array(3) {resources.getDrawable(R.drawable.person_on_a_bridge_near_a_lake_747964); resources.getDrawable(R.drawable.warm_forest_path); resources.getDrawable(R.drawable.dark_star_space)}
 
-        container?.background = bgs[0];
+        container?.background = bgs[1];
 
     }
 

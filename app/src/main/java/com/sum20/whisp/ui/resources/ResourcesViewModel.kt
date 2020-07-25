@@ -1,4 +1,4 @@
-package com.sum20.whisp.ui.notifications
+package com.sum20.whisp.ui.resources
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ class ResourcesViewModel : ViewModel() {
 
     //TODO CARDVIEWS AND SCROLLING VIEWS
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "Everyone asks where's walkdo, but no one asks how's waldo *cries*"
     }
     val text: LiveData<String> = _text
 }

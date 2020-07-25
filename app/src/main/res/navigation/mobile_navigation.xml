@@ -28,8 +28,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.sum20.whisp.ui.notifications.ResourcesFragment"
+        android:id="@+id/navigation_resources"
+        android:name="com.sum20.whisp.ui.resources.ResourcesFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_resources" />
     <activity

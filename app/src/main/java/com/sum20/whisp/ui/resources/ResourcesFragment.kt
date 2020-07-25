@@ -1,4 +1,4 @@
-package com.sum20.whisp.ui.notifications
+package com.sum20.whisp.ui.resources
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,7 +22,7 @@ class ResourcesFragment : Fragment() {
         resourcesViewModel =
             ViewModelProvider(this).get(ResourcesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_resources, container, false)
-        val textView: TextView = root.findViewById(R.id.disclaimer_resources)
+        val textView: TextView = root.findViewById(R.id.textView2)
         resourcesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
