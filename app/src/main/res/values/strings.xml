@@ -52,14 +52,14 @@
     <string name="disclaimer">
         Your conversations are not being recorded nor stored in any way. This is meant to be a personal
         coping tool, our app respects your privacy and grieving process. If you have any questions or
-        concerns please contact us with a prayer to jesus
+        concerns please contact us.
     </string>
-    <!-- TODO: create hyperlinked text, with bulleted list    -->
-    <string name="pandemic_text">
-        Coping with Corona Virus death\n
-        Grieving Alone and Together...
 
-    </string>
+    <!-- Resource Category Strings   -->
+    <string name="cat_pandemic"> CoronaVirus Pandemic </string>
+    <string name="cat_adults"> Grief and Loss: Adults </string>
+    <string name="cat_children_teens"> Grief and Loss: Children and Teens </string>
+    <string name="cat_specific"> Specific Types of Loss </string>
 
 
 </resources>

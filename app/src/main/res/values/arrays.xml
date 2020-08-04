@@ -9,4 +9,11 @@
         <item>@drawable/dark_star_space</item>
         <item>@drawable/person_on_a_bridge_near_a_lake_747964</item>
     </array>
+
+    <array name="resource_cats">
+        <item>@string/cat_pandemic</item>
+        <item>@string/cat_adults</item>
+        <item>@string/cat_children_teens</item>
+        <item>@string/cat_specific</item>
+    </array>
 </resources>

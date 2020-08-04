@@ -9,7 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/cat_lin"
+        android:layout_margin="8dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -29,15 +31,14 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp">
 
-            <include layout="@layout/resources_grief_pandemic_layout" />
-
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:text="dfgdrgsdfgf" />
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:text="" />
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -47,7 +48,11 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp">
 
-            <include layout="@layout/resources_grief_pandemic_layout" />
+            <TextView
+                android:id="@+id/textView9000"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:text="textview 9000" />
 
         </androidx.cardview.widget.CardView>
 

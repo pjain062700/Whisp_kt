@@ -11,8 +11,7 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_navigation_home_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_navigation_home_to_settingsFragment" />
     </fragment>
 
     <fragment
@@ -37,8 +36,8 @@
         android:name="com.sum20.whisp.DisplayCallActivity"
         android:label="activity_display_call"
         tools:layout="@layout/activity_display_call" />
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.sum20.whisp.ui.settings.SettingsActivity.SettingsFragment"
-        android:label="SettingsFragment" />
+<!--    <fragment-->
+<!--        android:id="@+id/settingsFragment"-->
+<!--        android:name="com.sum20.whisp.ui.settings.SettingsActivity.SettingsFragment"-->
+<!--        android:label="SettingsFragment" />-->
 </navigation>
