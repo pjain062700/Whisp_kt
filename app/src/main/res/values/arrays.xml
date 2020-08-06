@@ -16,4 +16,38 @@
         <item>@string/cat_children_teens</item>
         <item>@string/cat_specific</item>
     </array>
+
+    <string-array name="res_cat_pandemic_links">
+        <item>@string/cat_pandemic_link_0</item>
+        <item>@string/cat_pandemic_link_1</item>
+    </string-array>
+
+    <string-array name="res_cat_adults_links">
+        <item>@string/cat_adults_link_0</item>
+        <item>@string/cat_adults_link_1</item>
+        <item>@string/cat_adults_link_2</item>
+        <item>@string/cat_adults_link_3</item>
+        <item>@string/cat_adults_link_4</item>
+
+    </string-array>
+
+    <string-array name="res_cat_children_teens_links"></string-array>
+
+    <string-array name="res_cat_specific_links">
+        <item>@string/cat_specific_link_0</item>
+        <item>@string/cat_specific_link_1</item>
+        <item>@string/cat_specific_link_2</item>
+        <item>@string/cat_specific_link_3</item>
+        <item>@string/cat_specific_link_4</item>
+        <item>@string/cat_specific_link_5</item>
+        <item>@string/cat_specific_link_6</item>
+    </string-array>
+    <array name="res_links_array">
+        <item>@array/res_cat_pandemic_links</item>
+        <item>@array/res_cat_adults_links</item>
+        <item>@array/res_cat_children_teens_links</item>
+        <item>@array/res_cat_specific_links</item>
+    </array>
+
+
 </resources>

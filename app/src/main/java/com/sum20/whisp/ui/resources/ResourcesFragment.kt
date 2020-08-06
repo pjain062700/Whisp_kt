@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.view.iterator
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -37,14 +38,19 @@ class ResourcesFragment : Fragment() {
         val resCatList = resources.getStringArray(R.array.resource_cats)
 
 
-        for (i in 0..2) {
-            val custom: View = inflater.inflate(R.layout.resources_categories, null)
+        for (i in resCatList) {
+            val custom = inflater.inflate(R.layout.resources_categories, parent, false)
             val tv = custom.findViewById<View>(R.id.text) as TextView
-            tv.text = resCatList[i]
+            tv.text = i
             parent.addView(custom)
-//            parent.s
         }
 
+
         return root
+    }
+
+
+    private fun viewPress(string: String) {
+
     }
 }

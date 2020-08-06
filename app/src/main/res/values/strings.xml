@@ -61,5 +61,22 @@
     <string name="cat_children_teens"> Grief and Loss: Children and Teens </string>
     <string name="cat_specific"> Specific Types of Loss </string>
 
+    <!--    <![CDATA[<a href=" -->
+    <!--"]]>    -->
 
+    <string name="cat_pandemic_link_0"><![CDATA[<a href=https://bit.ly/grievingalone>Grieving Alone and Together<\a>]]></string>
+    <string name="cat_pandemic_link_1"><![CDATA[<a href=https://www.hospiceandcommunitycare.org/wp-content/uploads/Helping-Children-Cope-with-a-Coronavirus-Death.pdf>Helping children cope with a CoronaVirus death>]]></string>
+
+    <string name="cat_adults_link_0">https://www.hospiceandcommunitycare.org/wp-content/uploads/Coping-With-Anxiety-While-Grieving.pdf</string>
+    <string name="cat_adults_link_1">https://www.hospiceandcommunitycare.org/wp-content/uploads/Extreme-Self-Care-on-Your-Grief-Journey.pdf</string>
+    <string name="cat_adults_link_2">https://www.hospiceandcommunitycare.org/wp-content/uploads/Grief-and-Loss-as-a-Young-Adult.pdf</string>
+    <string name="cat_adults_link_3">https://www.hospiceandcommunitycare.org/wp-content/uploads/Ways-to-Cope-During-the-Holidays.pdf</string>
+    <string name="cat_adults_link_4">https://www.hospiceandcommunitycare.org/wp-content/uploads/Ways-to-Remember-Holidays.pdf</string>
+    <string name="cat_specific_link_0">https://www.hospiceandcommunitycare.org/wp-content/uploads/Loss-of-Parent.pdf</string>
+    <string name="cat_specific_link_1">https://www.hospiceandcommunitycare.org/wp-content/uploads/Losses-in-Later-Life.pdf</string>
+    <string name="cat_specific_link_2">https://www.hospiceandcommunitycare.org/wp-content/uploads/Losing-a-Loved-One-to-Drug-Overdose.pdf</string>
+    <string name="cat_specific_link_3">https://www.hospiceandcommunitycare.org/wp-content/uploads/Grieving-Death-of-Child.pdf</string>
+    <string name="cat_specific_link_4">https://www.hospiceandcommunitycare.org/wp-content/uploads/Grieving-Death-of-Spouse.pdf</string>
+    <string name="cat_specific_link_5">https://www.hospiceandcommunitycare.org/wp-content/uploads/Grieving-Death-of-an-Adult-Child.pdf</string>
+    <string name="cat_specific_link_6">https://www.hospiceandcommunitycare.org/wp-content/uploads/Couples-Loss-of-Child-1.pdf</string>
 </resources>
