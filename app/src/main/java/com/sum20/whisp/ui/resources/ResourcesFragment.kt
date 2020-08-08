@@ -1,7 +1,10 @@
 package com.sum20.whisp.ui.resources
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,13 +17,16 @@ import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.sum20.whisp.DisplayCallActivity
 import com.sum20.whisp.R
+import com.sum20.whisp.ResListActivity
 
 
 class ResourcesFragment : Fragment() {
 
     private lateinit var resourcesViewModel: ResourcesViewModel
 
+    @SuppressLint("Recycle")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,12 +42,16 @@ class ResourcesFragment : Fragment() {
 
         val parent = root.findViewById<LinearLayout>(R.id.cat_lin)
         val resCatList = resources.getStringArray(R.array.resource_cats)
+        val resLinks = resources.obtainTypedArray(R.array.res_links_array)
 
-
-        for (i in resCatList) {
+        for (i in resCatList.indices) {
             val custom = inflater.inflate(R.layout.resources_categories, parent, false)
             val tv = custom.findViewById<View>(R.id.text) as TextView
-            tv.text = i
+            tv.text = resCatList[i]
+            custom.setOnClickListener {
+                val arr = resLinks.getValue(i, TypedValue.TYPE_REFERENCE) as Array<String>
+                openCategory(resCatList[i], arr)
+            }
             parent.addView(custom)
         }
 
@@ -49,6 +59,13 @@ class ResourcesFragment : Fragment() {
         return root
     }
 
+    private fun openCategory(str: String, arr: Array<String>){
+        val intent = Intent(activity, ResListActivity::class.java).apply{
+            putExtra("com.sum20.whisp.ui.resources.HEADER",str)
+            putExtra("com.sum20.whisp.ui.resources.LINKS",arr)
+        }
+        startActivity(intent)
+    }
 
     private fun viewPress(string: String) {
 

@@ -30,13 +30,22 @@
         android:id="@+id/navigation_resources"
         android:name="com.sum20.whisp.ui.resources.ResourcesFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_resources" />
+        tools:layout="@layout/fragment_resources" >
+        <action
+            android:id="@+id/action_navigation_resources_to_resourceListFragment"
+            app:destination="@id/resourceListFragment" />
+    </fragment>
     <activity
         android:id="@+id/displayCallActivity"
         android:name="com.sum20.whisp.DisplayCallActivity"
         android:label="activity_display_call"
         tools:layout="@layout/activity_display_call" />
-<!--    <fragment-->
+    <fragment
+        android:id="@+id/resourceListFragment"
+        android:name="com.sum20.whisp.ui.resources.ResourceListFragment"
+        android:label="fragment_resource_list_layout"
+        tools:layout="@layout/fragment_resource_list_layout" />
+    <!--    <fragment-->
 <!--        android:id="@+id/settingsFragment"-->
 <!--        android:name="com.sum20.whisp.ui.settings.SettingsActivity.SettingsFragment"-->
 <!--        android:label="SettingsFragment" />-->
