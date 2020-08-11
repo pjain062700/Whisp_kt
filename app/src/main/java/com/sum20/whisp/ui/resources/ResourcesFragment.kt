@@ -45,12 +45,14 @@ class ResourcesFragment : Fragment() {
         val resLinks = resources.obtainTypedArray(R.array.res_links_array)
 
         for (i in resCatList.indices) {
+            val arrID = resLinks.getResourceId(i, -1)
+            if (arrID < 0) continue
+            val arr = resources.getStringArray(arrID)
             val custom = inflater.inflate(R.layout.resources_categories, parent, false)
             val tv = custom.findViewById<View>(R.id.text) as TextView
             tv.text = resCatList[i]
             custom.setOnClickListener {
-                val arr = resLinks.getValue(i, TypedValue.TYPE_REFERENCE) as Array<String>
-                openCategory(resCatList[i], arr)
+                openCategory(resCatList[i], arrID)
             }
             parent.addView(custom)
         }
@@ -59,10 +61,10 @@ class ResourcesFragment : Fragment() {
         return root
     }
 
-    private fun openCategory(str: String, arr: Array<String>){
-        val intent = Intent(activity, ResListActivity::class.java).apply{
-            putExtra("com.sum20.whisp.ui.resources.HEADER",str)
-            putExtra("com.sum20.whisp.ui.resources.LINKS",arr)
+    private fun openCategory(str: String, arr: Int) {
+        val intent = Intent(activity, ResListActivity::class.java).apply {
+            putExtra("com.sum20.whisp.ui.resources.HEADER", str)
+            putExtra("com.sum20.whisp.ui.resources.LINKS", arr)
         }
         startActivity(intent)
     }

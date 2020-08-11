@@ -2,7 +2,7 @@
     <string name="app_name">Whisp</string>
     <string name="title_home">Home</string>
     <string name="title_call">Call</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_resources">Resources</string>
     <string name="textview">TextView</string>
     <string name="ends_call">Ends Call</string>
     <string name="_1">1</string>
@@ -47,18 +47,23 @@
     <string name="title_activity_settings">SettingsActivity</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_fragment_resources">Resources</string>
+    <string name="body_fragment_resources">FILL ME IN</string>
     <!-- TODO: fill out bulleted list-->
     <string name="bulleted_list"></string>
-    <string name="disclaimer">
-        Your conversations are not being recorded nor stored in any way. This is meant to be a personal
+    <string name="disclaimer_preview">
+        &#9888; Your conversations are not being recorded &#9888;
+    </string>
+    <string name="disclaimer_full">
+        Your conversations are not being recorded in any way. This is meant to be a personal
         coping tool, our app respects your privacy and grieving process. If you have any questions or
         concerns please contact us.
     </string>
 
     <!-- Resource Category Strings   -->
-    <string name="cat_pandemic"> CoronaVirus Pandemic </string>
-    <string name="cat_adults"> Grief and Loss: Adults </string>
-    <string name="cat_children_teens"> Grief and Loss: Children and Teens </string>
+    <string name="cat_pandemic"> Corona Virus Pandemic </string>
+    <string name="cat_adults"> Adults </string>
+    <string name="cat_children_teens"> Children and Teens </string>
     <string name="cat_specific"> Specific Types of Loss </string>
 
     <!--    <![CDATA[<a href=" -->

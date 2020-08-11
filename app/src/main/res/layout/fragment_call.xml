@@ -8,6 +8,20 @@
     tools:context=".ui.call.CallFragment">
 
     <TextView
+        android:id="@+id/callFragmentDisclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/disclaimer_preview"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/text_call"
         android:layout_width="390dp"
         android:layout_height="72dp"

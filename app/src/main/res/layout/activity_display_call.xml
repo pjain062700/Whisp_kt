@@ -8,6 +8,20 @@
     android:background="@drawable/person_on_a_bridge_near_a_lake_747964"
     tools:context=".DisplayCallActivity">
 
+    <TextView
+        android:id="@+id/displayCallActivityDisclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#00FFFFFF"
+        android:gravity="center_horizontal"
+        android:text="@string/disclaimer_preview"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/ivEndCall"
         android:layout_width="90dp"

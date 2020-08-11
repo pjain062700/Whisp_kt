@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/navigation_resources"
         android:name="com.sum20.whisp.ui.resources.ResourcesFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_resources"
         tools:layout="@layout/fragment_resources" >
         <action
             android:id="@+id/action_navigation_resources_to_resourceListFragment"
