@@ -1,5 +1,6 @@
 package com.sum20.whisp
 
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -53,6 +54,15 @@ class MainActivity : AppCompatActivity() {
         container?.background = bgs[1];
 
     }
+
+    var spChanged =
+        OnSharedPreferenceChangeListener { prefs, key ->
+            val bgPref = prefs.getInt(, "").toString()
+            print(bgPref)
+
+            Toast.makeText(this, bgPref, Toast.LENGTH_SHORT).show()
+            setBg(bgPref)
+        }
 
     private fun loadData(){
         val mainView = R.layout.activity_main

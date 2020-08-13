@@ -18,8 +18,8 @@ class SettingsActivity : AppCompatActivity() {
             )
             .commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//        navView.setupWithNavController(navController)
+
+
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
