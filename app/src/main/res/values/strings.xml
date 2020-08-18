@@ -27,7 +27,7 @@
     <string name="background_summary">Change Current Background</string>
     <string name="dark_star_space">Dark Starry Night</string>
     <string name="person_on_a_bridge">Mountain Scenery</string>
-    <string name="bg_pref_key"></string>
+    <string name="bg_pref_key">ayelmao</string>
 
     <!-- Personalization Preferences -->
     <string name="music_file">Music to Use</string>

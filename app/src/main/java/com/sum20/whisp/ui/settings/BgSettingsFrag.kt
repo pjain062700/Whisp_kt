@@ -1,13 +1,13 @@
 package com.sum20.whisp.ui.settings
 
 import android.content.Context
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.preference.PreferenceManager
 import com.sum20.whisp.R
 
 class BgSettingsFrag : Fragment() {
@@ -32,11 +32,16 @@ class BgSettingsFrag : Fragment() {
         viewModel = ViewModelProvider(this).get(BgSettingsViewModel::class.java)
         // TODO: Use the ViewModel
 
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
         with (sharedPref.edit()) {
-            putInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
+            putInt(
+                getString(R.string.bg_pref_key),
+                R.drawable.person_on_a_bridge_near_a_lake_747964
+            )
             commit()
         }
+
+
     }
 
 
