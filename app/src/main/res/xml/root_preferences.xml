@@ -8,8 +8,6 @@
             app:key="background_images"
             app:title="@string/background_title"
             android:summary="@string/background_summary"
-            app:entries="@array/thumbnails"
-            app:entryValues="@array/images"
             app:useSimpleSummaryProvider="false" />
         <ListPreference
             app:defaultValue="reply"

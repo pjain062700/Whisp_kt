@@ -35,10 +35,6 @@ class ResourcesFragment : Fragment() {
         resourcesViewModel =
             ViewModelProvider(this).get(ResourcesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_resources, container, false)
-//        val textView: TextView = root.findViewById(R.id.textView2)
-//        resourcesViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
 
         val parent = root.findViewById<LinearLayout>(R.id.cat_lin)
         val resCatList = resources.getStringArray(R.array.resource_cats)
@@ -47,7 +43,6 @@ class ResourcesFragment : Fragment() {
         for (i in resCatList.indices) {
             val arrID = resLinks.getResourceId(i, -1)
             if (arrID < 0) continue
-            val arr = resources.getStringArray(arrID)
             val custom = inflater.inflate(R.layout.resources_categories, parent, false)
             val tv = custom.findViewById<View>(R.id.text) as TextView
             tv.text = resCatList[i]

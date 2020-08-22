@@ -1,8 +1,9 @@
 <resources>
     <!-- BG Preference -->
-    <array name="thumbnails">
+    <array name="BgThumbnails">
         <item>@drawable/dark_star_space</item>
         <item>@drawable/person_on_a_bridge_near_a_lake_747964</item>
+        <item>@drawable/warm_forest_path</item>
     </array>
 
     <array name="images">

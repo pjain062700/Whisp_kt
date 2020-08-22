@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg_settings_relative"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.settings.BgSettingsFrag">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.settings.BgSettingsFrag"
+    tools:visibility="visible">
 
-    <TextView
+    <ImageView
+        android:id="@+id/pobnl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="yeet0"
+        app:srcCompat="@drawable/person_on_a_bridge_near_a_lake_747964"
+        tools:src="@drawable/person_on_a_bridge_near_a_lake_747964"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/dss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="yeet1"
+        app:srcCompat="@drawable/dark_star_space"
+        tools:src="@drawable/dark_star_space"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/wfp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:contentDescription="yeet2"
+        app:srcCompat="@drawable/warm_forest_path"
+        tools:src="@drawable/warm_forest_path" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+</LinearLayout>

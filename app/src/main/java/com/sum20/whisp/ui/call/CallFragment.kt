@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.preference.PreferenceManager
 import com.sum20.whisp.DisplayCallActivity
 import com.sum20.whisp.R
 import kotlinx.android.synthetic.main.fragment_call.*
@@ -102,8 +103,10 @@ class CallFragment : Fragment() {
     private fun callPress() {
         val textCall = view?.findViewById<TextView>(R.id.text_call)
         val phoneNumber = textCall?.text.toString()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val intent = Intent(activity, DisplayCallActivity::class.java).apply{
             putExtra("com.sum20.whisp.ui.call.CALLING",phoneNumber)
+            putExtra("com.sum20.whisp.ui.call.BG", prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space))
         }
         startActivity(intent)
     }
