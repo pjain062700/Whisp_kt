@@ -7,15 +7,20 @@ import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 
-//TODO: make back button work :)
+//TODO: make back button work
 
 class ResListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_res_list)
+        val backButton = findViewById<Button>(R.id.button)
+        backButton.setOnClickListener {
+            backButton()
+        }
 
         val header = intent.getStringExtra("com.sum20.whisp.ui.resources.HEADER")
         val linkID = intent.getIntExtra("com.sum20.whisp.ui.resources.LINKS", -1)
@@ -44,5 +49,11 @@ class ResListActivity : AppCompatActivity() {
             )
             layout.addView(custom)
         }
+
+
+    }
+
+    private fun backButton() {
+        finish()
     }
 }
