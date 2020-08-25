@@ -90,7 +90,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, bgPrefKey, Toast.LENGTH_SHORT).show()
             }
         prefs.registerOnSharedPreferenceChangeListener(spChanged)
-        setBg(prefs.getInt(getString(R.string.bg_pref_key), R.drawable.warm_forest_path))
+        setBg(
+            prefs.getInt(
+                getString(R.string.bg_pref_key),
+                R.drawable.person_on_a_bridge_near_a_lake_747964
+            )
+        )
     }
 
 }

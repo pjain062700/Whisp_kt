@@ -1,6 +1,7 @@
 package com.sum20.whisp.ui.settings
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,16 +28,19 @@ class BgSettingsFrag : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.bg_settings_fragment, container, false)
 
-        root.findViewById<ImageView>(R.id.pobnl).setOnClickListener {
-            storeBg(R.drawable.person_on_a_bridge_near_a_lake_747964)
-        }
+        val nestedLin = root.findViewById<LinearLayout>(R.id.bg_linear_layout)
+        val imageArray = resources.obtainTypedArray(R.array.BgThumbnails)
 
-        root.findViewById<ImageView>(R.id.dss).setOnClickListener {
-            storeBg(R.drawable.dark_star_space)
-        }
-
-        root.findViewById<ImageView>(R.id.wfp).setOnClickListener {
-            storeBg(R.drawable.warm_forest_path)
+        for (image in 0..imageArray.length()) {
+            val arrID = imageArray.getResourceId(image, -1)
+            if (arrID < 0) continue
+            val custom = inflater.inflate(R.layout.bg_settings_card_view_template, nestedLin, false)
+            val IV = custom.findViewById<View>(R.id.IVBG) as ImageView
+            IV.setImageResource(arrID)
+            custom.setOnClickListener {
+                storeBg(arrID)
+            }
+            nestedLin.addView(custom)
         }
 
         return root

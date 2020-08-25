@@ -22,11 +22,14 @@ class DisplayCallActivity : AppCompatActivity() {
             text = phoneNumber
         }
 
-        val bgPref = intent.getIntExtra("com.sum20.whisp.ui.call.BG", R.id.darkStarryNightSettingImage)
+        val bgPref = intent.getIntExtra(
+            "com.sum20.whisp.ui.call.BG",
+            R.drawable.person_on_a_bridge_near_a_lake_747964
+        )
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            container?.background = resources.getDrawable(bgPref, resources.newTheme())
+            layoutthing.background = resources.getDrawable(bgPref, resources.newTheme())
         } else {
-            container?.background = resources.getDrawable(bgPref)
+            layoutthing.background = resources.getDrawable(bgPref)
         }
 
         val callTime = findViewById<Chronometer>(R.id.callTime).start()

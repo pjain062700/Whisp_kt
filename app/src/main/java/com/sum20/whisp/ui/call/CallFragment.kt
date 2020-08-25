@@ -24,12 +24,12 @@ class CallFragment : Fragment() {
     private lateinit var callViewModel: CallViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         callViewModel =
-                ViewModelProvider(this).get(CallViewModel::class.java)
+            ViewModelProvider(this).get(CallViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_call, container, false)
         val textView: TextView = root.findViewById(R.id.text_call)
         callViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -92,7 +92,7 @@ class CallFragment : Fragment() {
 
     private fun appendNum(string: String, clear: Boolean) {
         CallTones.playTone(string)
-        if(text_call.length() <= 15){
+        if (text_call.length() <= 15) {
             val t = view?.findViewById<TextView>(R.id.text_call)
             t!!.append(string)
             CallTones.playTone(string)
@@ -104,9 +104,12 @@ class CallFragment : Fragment() {
         val textCall = view?.findViewById<TextView>(R.id.text_call)
         val phoneNumber = textCall?.text.toString()
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        val intent = Intent(activity, DisplayCallActivity::class.java).apply{
-            putExtra("com.sum20.whisp.ui.call.CALLING",phoneNumber)
-            putExtra("com.sum20.whisp.ui.call.BG", prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space))
+        val intent = Intent(activity, DisplayCallActivity::class.java).apply {
+            putExtra("com.sum20.whisp.ui.call.CALLING", phoneNumber)
+            putExtra(
+                "com.sum20.whisp.ui.call.BG",
+                prefs.getInt(getString(R.string.person_on_a_bridge), R.drawable.dark_star_space)
+            )
         }
         startActivity(intent)
     }
@@ -114,7 +117,7 @@ class CallFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         val textCall = view?.findViewById<TextView>(R.id.text_call)
-        textCall!!.text=""
+        textCall!!.text = ""
     }
 
 
