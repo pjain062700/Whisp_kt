@@ -12,13 +12,13 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.NonCancellable.cancel
 
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
 
-        var bgPref = ""
+    override fun onCreate(savedInstanceState: Bundle?) {
 
         // Tells AS to run out code in addition to existing code in oncreate() parent class
         super.onCreate(savedInstanceState)
@@ -38,13 +38,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         supportActionBar?.hide()
-
-
-//        bgPref = prefs.getString("background_images", "").toString()
-//        print(bgPref)
-//
-//        Toast.makeText(this, bgPref, Toast.LENGTH_SHORT).show()
-//        setBg(bgPref)
     }
 
 
@@ -57,24 +50,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-    private fun loadData() {
-        val mainView = R.layout.activity_main
-        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val backgroundImage = sharedPreferences.getString("background_images", "");
-    }
-
     override fun onStart() {
         super.onStart()
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
-        val spChanged =
-            OnSharedPreferenceChangeListener { prefs, key ->
-                val bgPrefKey =
-                    prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
-                Toast.makeText(this, bgPrefKey, Toast.LENGTH_SHORT).show()
-            }
-        prefs.registerOnSharedPreferenceChangeListener(spChanged)
         setBg(prefs.getInt(getString(R.string.bg_pref_key), R.drawable.warm_forest_path))
 
     }
@@ -84,18 +63,12 @@ class MainActivity : AppCompatActivity() {
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
         val spChanged =
-            OnSharedPreferenceChangeListener { prefs, key ->
+            OnSharedPreferenceChangeListener { prefs, _ ->
                 val bgPrefKey =
                     prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
-                Toast.makeText(this, bgPrefKey, Toast.LENGTH_SHORT).show()
+                setBg(bgPrefKey)
             }
         prefs.registerOnSharedPreferenceChangeListener(spChanged)
-        setBg(
-            prefs.getInt(
-                getString(R.string.bg_pref_key),
-                R.drawable.person_on_a_bridge_near_a_lake_747964
-            )
-        )
     }
 
 }

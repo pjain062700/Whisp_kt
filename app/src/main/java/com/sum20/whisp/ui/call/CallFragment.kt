@@ -108,7 +108,7 @@ class CallFragment : Fragment() {
             putExtra("com.sum20.whisp.ui.call.CALLING", phoneNumber)
             putExtra(
                 "com.sum20.whisp.ui.call.BG",
-                prefs.getInt(getString(R.string.person_on_a_bridge), R.drawable.dark_star_space)
+                prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
             )
         }
         startActivity(intent)

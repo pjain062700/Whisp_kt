@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/design_default_color_on_primary"
     app:cardCornerRadius="10dp"
     app:cardElevation="2dp"
+    app:contentPadding="8dp"
     card_view:cardPreventCornerOverlap="true">
 
     <ImageView
@@ -16,8 +18,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
         android:contentDescription=""
+        android:gravity="center_horizontal"
         tools:ignore="ContentDescription" />
 
 
