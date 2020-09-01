@@ -68,6 +68,10 @@ class MainActivity : AppCompatActivity() {
                     prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
                 setBg(bgPrefKey)
             }
+        val themeSPListener =
+            OnSharedPreferenceChangeListener { prefs, _ ->
+
+            }
         prefs.registerOnSharedPreferenceChangeListener(spChanged)
     }
 

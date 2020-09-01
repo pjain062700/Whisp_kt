@@ -6,16 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/person_on_a_bridge_near_a_lake_747964"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:menu="@menu/bottom_nav_menu">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="407dp"
-        android:layout_height="69dp"
-        android:background="#616A6868"
-        app:itemIconTint="@color/design_default_color_on_secondary"
-        app:itemTextColor="@color/design_default_color_on_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

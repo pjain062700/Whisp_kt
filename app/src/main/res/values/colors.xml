@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#FFAAAAAA</color>
     <color name="colorAccent">#808080</color>
     <color name="black">@color/design_default_color_on_secondary</color>
+
+
+    <color name="lightBackgroundColor">#FFFFFF</color>
+    <color name="light">#FFFFFF</color>
+
 </resources>

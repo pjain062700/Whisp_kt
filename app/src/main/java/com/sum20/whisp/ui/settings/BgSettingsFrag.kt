@@ -1,6 +1,7 @@
 package com.sum20.whisp.ui.settings
 
 import android.content.Context
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
@@ -41,14 +42,17 @@ class BgSettingsFrag : Fragment() {
         // programmatically adding cardviews
         val nestedLin = root.findViewById<LinearLayout>(R.id.bg_linear_layout)
         val imageArray = resources.obtainTypedArray(R.array.BgThumbnails)
+        val themeArray = resources.obtainTypedArray(R.array.Theme)
 
-        for (image in 0..imageArray.length()) {
-            val arrID = imageArray.getResourceId(image, -1)
+        for (index in 0..imageArray.length()) {
+            val arrID = imageArray.getResourceId(index, -1)
+            val themeID = themeArray.getResourceId(index, -1);
             if (arrID < 0) continue
+            if (themeID < 0) continue
             val custom = inflater.inflate(R.layout.bg_settings_card_view_template, nestedLin, false)
             val IV = custom.findViewById<View>(R.id.IVBG) as ImageView
             IV.setImageResource(arrID)
-            if(arrID == currBg) {
+            if (arrID == currBg) {
                 currCardView = custom as CardView
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     currCardView.setCardBackgroundColor(resources.getColor(R.color.black, null))
@@ -59,7 +63,7 @@ class BgSettingsFrag : Fragment() {
             }
 
             custom.setOnClickListener {
-                storeBg(arrID, custom as CardView)
+                storeBg(arrID, themeID, custom as CardView)
                 
             }
             nestedLin.addView(custom)
@@ -85,16 +89,16 @@ class BgSettingsFrag : Fragment() {
 
     }
 
-    private fun storeBg(resId: Int, newCustom: CardView){
+    private fun storeBg(resId: Int, themeID: Int, newCustom: CardView) {
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
-        if(resId != currBg){
+        if (resId != currBg) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.colorPrimary, null))
                 currCardView = newCustom
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.black, null))
 
-            }
-            else{
+
+            } else {
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.colorPrimary))
                 currCardView = newCustom
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.black))

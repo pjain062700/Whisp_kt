@@ -5,6 +5,11 @@
         <item>@drawable/dark_star_space</item>
         <item>@drawable/warm_forest_path</item>
     </integer-array>
+    <array name="Theme">
+        <item>@style/LightTheme</item>
+        <item>@style/DarkTheme</item>
+        <item>@style/WarmTheme</item>
+    </array>
 
     <array name="images">
         <item>@drawable/dark_star_space</item>
