@@ -44,7 +44,7 @@ class BgSettingsFrag : Fragment() {
         val imageArray = resources.obtainTypedArray(R.array.BgThumbnails)
         val themeArray = resources.obtainTypedArray(R.array.Theme)
 
-        for (index in 0..imageArray.length()) {
+        for (index in 0..(imageArray.length()-1)) {
             val arrID = imageArray.getResourceId(index, -1)
             val themeID = themeArray.getResourceId(index, -1);
             if (arrID < 0) continue
@@ -111,6 +111,10 @@ class BgSettingsFrag : Fragment() {
                 putInt(
                     getString(R.string.bg_pref_key),
                     resId
+                )
+                putInt(
+                    getString(R.string.theme_pref_key),
+                    themeID
                 )
                 commit()
             }

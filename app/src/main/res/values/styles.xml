@@ -7,9 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="LightTheme" parent="Theme.MaterialComponents">
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
-        <item name="android:colorBackground">@color/lightBackgroundColor</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         // Tells AS to run out code in addition to existing code in oncreate() parent class
         super.onCreate(savedInstanceState)
+        // Set theme
+        setTheme(getCurrentTheme())
         // Set XML file you want as main layout when app starts
         setContentView(R.layout.activity_main)
 
@@ -47,14 +49,19 @@ class MainActivity : AppCompatActivity() {
         } else {
             container?.background = resources.getDrawable(bgPref)
         }
+    }
 
+    private fun getCurrentTheme(): Int {
+        val prefs =
+            PreferenceManager.getDefaultSharedPreferences(this)
+        return prefs.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
     }
 
     override fun onStart() {
         super.onStart()
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
-        setBg(prefs.getInt(getString(R.string.bg_pref_key), R.drawable.warm_forest_path))
+        setBg(prefs.getInt(getString(R.string.bg_pref_key), R.drawable.person_on_a_bridge_near_a_lake_747964))
 
     }
 
@@ -65,12 +72,11 @@ class MainActivity : AppCompatActivity() {
         val spChanged =
             OnSharedPreferenceChangeListener { prefs, _ ->
                 val bgPrefKey =
-                    prefs.getInt(getString(R.string.bg_pref_key), R.drawable.dark_star_space)
+                    prefs.getInt(getString(R.string.bg_pref_key), R.drawable.person_on_a_bridge_near_a_lake_747964)
+                val themePrefKey =
+                    prefs.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
                 setBg(bgPrefKey)
-            }
-        val themeSPListener =
-            OnSharedPreferenceChangeListener { prefs, _ ->
-
+                recreate()
             }
         prefs.registerOnSharedPreferenceChangeListener(spChanged)
     }
