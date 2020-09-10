@@ -70,11 +70,14 @@ class MainActivity : AppCompatActivity() {
         val prefs =
             PreferenceManager.getDefaultSharedPreferences(this)
         val spChanged =
-            OnSharedPreferenceChangeListener { prefs, _ ->
+            OnSharedPreferenceChangeListener { pref, _ ->
                 val bgPrefKey =
-                    prefs.getInt(getString(R.string.bg_pref_key), R.drawable.person_on_a_bridge_near_a_lake_747964)
+                    pref.getInt(
+                        getString(R.string.bg_pref_key),
+                        R.drawable.person_on_a_bridge_near_a_lake_747964
+                    )
                 val themePrefKey =
-                    prefs.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
+                    pref.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
                 setBg(bgPrefKey)
                 recreate()
             }

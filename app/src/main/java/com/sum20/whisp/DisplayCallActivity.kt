@@ -8,11 +8,13 @@ import android.view.View
 import android.widget.Chronometer
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class DisplayCallActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(getCurrentTheme())
         setContentView(R.layout.activity_display_call)
 
         val layoutthing = findViewById<ConstraintLayout>(R.id.constraintDisplayCall)
@@ -36,8 +38,14 @@ class DisplayCallActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    fun callEnd(view: View){
+    fun callEnd(view: View) {
         finish()
+    }
+
+    private fun getCurrentTheme(): Int {
+        val prefs =
+            PreferenceManager.getDefaultSharedPreferences(this)
+        return prefs.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
     }
 
     override fun onDestroy() {

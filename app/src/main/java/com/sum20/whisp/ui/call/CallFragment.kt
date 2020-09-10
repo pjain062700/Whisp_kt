@@ -95,7 +95,6 @@ class CallFragment : Fragment() {
         if (text_call.length() <= 15) {
             val t = view?.findViewById<TextView>(R.id.text_call)
             t!!.append(string)
-            CallTones.playTone(string)
         }
 
     }

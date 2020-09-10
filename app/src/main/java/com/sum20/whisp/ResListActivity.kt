@@ -10,12 +10,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.preference.PreferenceManager
 
 //TODO: make back button work
 
 class ResListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(getCurrentTheme())
         setContentView(R.layout.activity_res_list)
         val backButton = findViewById<Button>(R.id.button)
         backButton.setOnClickListener {
@@ -51,6 +53,12 @@ class ResListActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun getCurrentTheme(): Int {
+        val prefs =
+            PreferenceManager.getDefaultSharedPreferences(this)
+        return prefs.getInt(getString(R.string.theme_pref_key), R.style.LightTheme)
     }
 
     private fun backButton() {

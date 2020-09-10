@@ -14,6 +14,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.core.app.ActivityCompat.recreate
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.PreferenceManager
 import com.sum20.whisp.R
@@ -97,7 +99,6 @@ class BgSettingsFrag : Fragment() {
                 currCardView = newCustom
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.black, null))
 
-
             } else {
                 currCardView.setCardBackgroundColor(resources.getColor(R.color.colorPrimary))
                 currCardView = newCustom
@@ -117,6 +118,7 @@ class BgSettingsFrag : Fragment() {
                     themeID
                 )
                 commit()
+
             }
         }
 
