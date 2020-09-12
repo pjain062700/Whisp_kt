@@ -10,12 +10,11 @@
             android:summary="@string/background_summary"
             app:useSimpleSummaryProvider="false" />
         <ListPreference
-            app:defaultValue="reply"
+            android:defaultValue="1"
+            android:entries="@array/bg_music_lists"
+            android:entryValues="@array/bg_music_lists"
             app:key="app_music"
-            app:title="@string/music_file"
-            app:useSimpleSummaryProvider="true" />
-        <!--app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"-->
+            app:title="@string/music_file" />
 
     </PreferenceCategory>
 

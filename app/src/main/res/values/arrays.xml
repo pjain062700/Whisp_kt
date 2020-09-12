@@ -56,4 +56,12 @@
     </array>
 
 
+    <!--AUDIO FILES-->
+    <string-array name="bg_music_lists">
+        <item>@string/ambient</item>
+        <item>@string/classical</item>
+        <item>@string/cinematic</item>
+    </string-array>
+
+
 </resources>

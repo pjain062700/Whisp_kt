@@ -88,4 +88,8 @@
     <string name="cat_specific_link_4"><![CDATA[<a href=https://www.hospiceandcommunitycare.org/wp-content/uploads/Grieving-Death-of-Spouse.pdf>Grieving the death of a spouse<\a>]]></string>
     <string name="cat_specific_link_5"><![CDATA[<a href=https://www.hospiceandcommunitycare.org/wp-content/uploads/Grieving-Death-of-an-Adult-Child.pdf>Grieving the death of an adult child<\a>]]></string>
     <string name="cat_specific_link_6"><![CDATA[<a href=https://www.hospiceandcommunitycare.org/wp-content/uploads/Couples-Loss-of-Child-1.pdf>Couples coping with the loss of a child<\a>]]></string>
+    <!--AUDIO LIST-->
+    <string name="ambient">Ambient</string>
+    <string name="classical">Classical</string>
+    <string name="cinematic">Cinematic</string>
 </resources>
